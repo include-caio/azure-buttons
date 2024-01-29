@@ -1,0 +1,26 @@
+{
+    "name": "Azure Buttons",
+    "version": "1.0.0",
+    "description": "Buttons missing in Azure",
+    "manifest_version": 3,
+    "author": "Caio Souza do Carmo",
+    "action": {
+        "default_popup": "index.html",
+        "default_title": "Azure Buttons"
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://*.portal.azure.com/*"],
+            "js": ["contentScript.js"]
+        }
+    ],
+    "icons": {
+        "16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+    },
+    "permissions": ["activeTab"],
+    "host_permissions": [
+        "https://*.portal.azure.com/*"
+    ]
+}
